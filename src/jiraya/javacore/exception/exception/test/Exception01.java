@@ -1,4 +1,4 @@
-package jiraya.javacore.exception.test;
+package jiraya.javacore.exception.exception.test;
 
 import java.io.File;
 import java.io.IOException;

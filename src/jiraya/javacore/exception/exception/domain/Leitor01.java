@@ -1,4 +1,4 @@
-package jiraya.javacore.exception.domain;
+package jiraya.javacore.exception.exception.domain;
 
 import java.io.Closeable;
 import java.io.IOException;
