@@ -1,4 +1,4 @@
-package jiraya.javacore.date;
+package jiraya.javacore.formatting;
 
 import java.util.Date;
 
