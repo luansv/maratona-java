@@ -7,12 +7,18 @@ public class Artists implements Comparable<Artists>{
     private Long id;
     private String name;
     private Double streams;
+    private int yearBirth;
 
     public Artists(Long id, String name, Double streams) {
         Objects.requireNonNull(id);
         this.id = id;
         this.name = name;
         this.streams = streams;
+    }
+
+    public Artists(Long id, String name, Double streams, int yearBirth) {
+        this(id, name, streams);
+        this.yearBirth = yearBirth;
     }
 
     public Long getId() {
@@ -49,7 +55,7 @@ public class Artists implements Comparable<Artists>{
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, streams);
+        return Objects.hash(id, name);
     }
 
     @Override
@@ -58,7 +64,16 @@ public class Artists implements Comparable<Artists>{
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", streams=" + streams +
+                ", yearBirth=" + yearBirth +
                 '}';
+    }
+
+    public int getYearBirth() {
+        return yearBirth;
+    }
+
+    public void setYearBirth(int yearBirth) {
+        this.yearBirth = yearBirth;
     }
 
     @Override
@@ -78,6 +93,7 @@ public class Artists implements Comparable<Artists>{
 
        // return this.name.compareTo(otherArtists.getName());
         // return thid.id
+
 
 
 
