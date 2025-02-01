@@ -1,0 +1,2 @@
+Hello, Word!
+Welcome to file handling in Java.

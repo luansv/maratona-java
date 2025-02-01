@@ -27,7 +27,7 @@ public class MapTest03 {
         for(Map.Entry<Consumidor, List<Artists>> entry: consumidorArtistsMap.entrySet()){
             System.out.println("----"+entry.getKey().getNome());
             for (Artists artists: entry.getValue()){
-                System.out.println("---------"+artists.getName());
+                System.out.println("-------------"+artists.getName());
             }
         }
 
