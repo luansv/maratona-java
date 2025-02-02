@@ -1,27 +1,29 @@
 package jiraya.javacore.collection.exercises;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
-public class Exercise07 {
+public class Exercise08 {
     public static void main(String[] args) {
-        //Comparing two ArrayList In Java
-        List<Integer> list = new ArrayList<>();
-        list.add(15);
-        list.add(0);
-        list.add(7);
+        //Iterate LinkedList
 
-        List<Integer> list2 = new ArrayList<>();
-        list2.add(15);
-        list2.add(70);
-        list2.add(7);
+        LinkedList<String> strings = new LinkedList<>();
+        strings.add("Julia");
+        strings.add("Malu");
+        strings.add("Helena");
 
-        if (!list.equals(list2)){
-            System.out.println("Not the same: "+list+"\n"+list2);
-            return;
-        }
-        System.out.println("Same: "+list+"\n"+list2);
 
+        interateUsingInterator(strings);
     }
+
+    public static void interateUsingInterator(LinkedList<String> strings) {
+
+        Iterator iterator = strings.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next() + " ");
+        }
+    }
+
 }

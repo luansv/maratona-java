@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Exxercise01 {
+public class Exercise01 {
     //Compare Elements in a Collection.
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class Exxercise01 {
         int min = Collections.min(list);
         int max = Collections.max(list);
         if (min == max){
-            System.out.println("Same value: "+max);
+            System.out.println("All elements are equal: "+max);
         }
         System.out.println("Max: "+max);
         System.out.println("Min: "+min);

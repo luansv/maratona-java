@@ -3,15 +3,18 @@ package jiraya.javacore.collection.exercises;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Exercise04 {
+public class Exercise05 {
     public static void main(String[] args) {
-        //Get a Size of Collection
-        List<Integer> list = new ArrayList<>();
-        list.add(15);
-        list.add(70);
-        list.add(7);
+        //Replace an element from ArrayList
 
-        System.out.println(list.size());
+        List<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("C");
+        list.add("B");
+
+        list.set(1,"F");
         System.out.println(list);
+
+
     }
 }

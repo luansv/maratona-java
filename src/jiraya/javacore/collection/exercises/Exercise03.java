@@ -1,12 +1,9 @@
 package jiraya.javacore.collection.exercises;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
-public class Exercise02 {
-    //Compare Elements in a Collection.
+public class Exercise03 {
     public static void main(String[] args) {
         //Remove a Specific Element From a Collection
 

@@ -1,19 +1,18 @@
 package jiraya.javacore.collection.exercises;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Exercise05 {
+public class Exercise06 {
     public static void main(String[] args) {
-        //Replace an element from ArrayList
+        //Convert Array to ArrayList.
 
-        List<String> list = new ArrayList<>();
-        list.add("A");
-        list.add("C");
-        list.add("B");
-
-        list.set(1,"F");
+        String[] strings = {"a", "b", "c"};
+        List<String> list = new ArrayList<>(Arrays.asList(strings));
+        list.add("d");
         System.out.println(list);
+
 
 
     }
