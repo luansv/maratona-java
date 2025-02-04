@@ -1,4 +1,4 @@
-package jiraya.javacore.generics;
+package jiraya.javacore.generics.test;
 
 import java.util.List;
 
