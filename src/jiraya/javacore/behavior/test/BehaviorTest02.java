@@ -1,48 +1,29 @@
 package jiraya.javacore.behavior.test;
 
 import jiraya.javacore.behavior.domain.Car;
+import jiraya.javacore.behavior.interfaces.CarPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BehaviorTest01 {
-    private static List<Car> carList = List.of(new Car("Red", 2024), new Car("Black", 2022));
+public class BehaviorTest02 {
+    private static List<Car> carList = List.of(new Car("Green", 2024), new Car("Black", 2022));
 
     public static void main(String[] args) {
-        System.out.println(filterGreenCar(carList));
-        System.out.println(filterByColor(carList,"Red"));
-        System.out.println();
-        System.out.println(filterByYear(carList,2023));
 
+        List<Car> greenCars = filter(carList, car -> car.getColor().equals("Green"));
+        List<Car> carYear = filter(carList, car -> car.getYear() < 2023);
+        System.out.println("Color: "+greenCars);
+        System.out.println("Year: "+carYear);
     }
 
-    private static List<Car> filterGreenCar(List<Car> carList) {
-        List<Car> greenCars = new ArrayList<>();
+    private static List<Car> filter(List<Car> carList, CarPredicate carPredicate) {
+        List<Car> filterCar = new ArrayList<>();
         for (Car car : carList) {
-            if (car.getColor().equals("Blue")) {
-                greenCars.add(car);
+            if (carPredicate.test(car)) {
+                filterCar.add(car);
             }
         }
-        return greenCars;
-    }
-
-    private static List<Car> filterByColor(List<Car> carList, String color) {
-        List<Car> greenCars = new ArrayList<>();
-        for (Car car : carList) {
-            if (car.getColor().equals(color)) {
-                greenCars.add(car);
-            }
-        }
-        return greenCars;
-    }
-
-    private static List<Car> filterByYear(List<Car> carList, int year) {
-        List<Car> carsYear = new ArrayList<>();
-        for (Car car : carList) {
-            if (car.getYear() <= year) {
-                carsYear.add(car);
-            }
-        }
-        return carsYear;
+        return filterCar;
     }
 }
