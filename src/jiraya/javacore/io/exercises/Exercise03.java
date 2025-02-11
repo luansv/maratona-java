@@ -23,7 +23,7 @@ public class Exercise03 {
             bufferedWriter.newLine();
             bufferedWriter.write("Practice makes perfect.");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error accurred while writing the file: " + e.getMessage());
         }
 
         try (FileReader fileReader = new FileReader(file);
@@ -33,6 +33,7 @@ public class Exercise03 {
                 System.out.println(string);
             }
         } catch (IOException e) {
-            System.out.println("Error occurred while reading the file: "+e.getMessage());        }
+            System.out.println("Error occurred while reading the file: " + e.getMessage());
+        }
     }
 }

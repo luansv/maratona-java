@@ -5,6 +5,7 @@ import jiraya.javacore.behavior.interfaces.CarPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class BehaviorTest02 {
     private static List<Car> carList = List.of(new Car("Green", 2024), new Car("Black", 2022));
@@ -13,8 +14,8 @@ public class BehaviorTest02 {
 
         List<Car> greenCars = filter(carList, car -> car.getColor().equals("Green"));
         List<Car> carYear = filter(carList, car -> car.getYear() < 2023);
-        System.out.println("Color: "+greenCars);
-        System.out.println("Year: "+carYear);
+        System.out.println("Color: " + greenCars);
+        System.out.println("Year: " + carYear);
     }
 
     private static List<Car> filter(List<Car> carList, CarPredicate carPredicate) {
@@ -25,5 +26,15 @@ public class BehaviorTest02 {
             }
         }
         return filterCar;
+    }
+
+    private static <T> List<T> filter2(List<T> list, Predicate<T> predicate) {
+        List<T> filteredList = new ArrayList<>();
+        for (T e : list) {
+            if (predicate.test(e)) {
+                filteredList.add(e);
+            }
+        }
+        return filteredList;
     }
 }
