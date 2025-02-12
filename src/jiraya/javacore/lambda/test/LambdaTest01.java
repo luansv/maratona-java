@@ -1,4 +1,4 @@
-package jiraya.javacore.lambda;
+package jiraya.javacore.lambda.test;
 
 import java.util.List;
 import java.util.function.Consumer;
