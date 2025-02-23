@@ -1,29 +1,31 @@
 package jiraya.javacore.jdbc.domain;
 
+import lombok.Builder;
+import lombok.Value;
+
 import java.util.Objects;
 
 public class Author {
     private Integer id;
     private String name;
 
-
-    public static final class authorBuilder {
+    public static final class AuthorBuilder {
         private Integer id;
         private String name;
 
-        private authorBuilder() {
+        public AuthorBuilder() {
         }
 
-        public static authorBuilder builder() {
-            return new authorBuilder();
+        public static AuthorBuilder builder() {
+            return new AuthorBuilder();
         }
 
-        public authorBuilder id(Integer id) {
+        public AuthorBuilder id(Integer id) {
             this.id = id;
             return this;
         }
 
-        public authorBuilder name(String name) {
+        public AuthorBuilder name(String name) {
             this.name = name;
             return this;
         }
