@@ -29,4 +29,36 @@ public class AuthorService {
             throw new IllegalArgumentException("Invalid number for id");
         }
     }
+
+    public static List<Author> listByName(String name){
+        return AuthorRepository.findByName(name);
+    }
+
+    public static void showAuthorMetaData(){
+        AuthorRepository.showAuthorMetaData();
+    }
+
+    public static void showDriverMetaData(){
+        AuthorRepository.showDriverMetadata();
+    }
+
+    public static void showTypeScrollWorking(){
+        AuthorRepository.showTypeScrollWorking();
+    }
+
+    public static List<Author> findByNameAndUpdateToUpperCase(String name){
+        return AuthorRepository.findByNameAndUpdateToUpperCase("name");
+    }
+
+    public static List<Author> findByNameAndInsertWhenNotFound (String name){
+        return AuthorRepository.findByNameAndInsertWhenNotFound(name);
+    }
+
+    public static void findByNameAndDelete(String name){
+        AuthorRepository.findByNameAndDelete(name);
+    }
+
+
+
+
 }

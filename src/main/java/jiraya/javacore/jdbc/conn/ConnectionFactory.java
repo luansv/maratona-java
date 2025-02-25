@@ -21,7 +21,7 @@ public class ConnectionFactory {
     public static Connection getConnection() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/book_store"; //muda dependendo do banco de dados
         String username = "root";
-        String password = "Battle19.";
+        String password = "root";
         return DriverManager.getConnection(url, username, password);
     }
 }

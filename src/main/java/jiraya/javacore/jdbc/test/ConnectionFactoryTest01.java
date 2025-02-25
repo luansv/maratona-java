@@ -13,13 +13,42 @@ public class ConnectionFactoryTest01 {
     public static void main(String[] args) {
         Author author = new Author.AuthorBuilder().name("Clarice Lispector").build();
         Author authorToUpdate = new Author.AuthorBuilder().id(1).name("Kafta").build();
-        // AuthorService.update(authorToUpdate);
-        List<Author> authors = AuthorService.listAll();
-        // log.info(authors);
 
-        for (Author author1 : authors) {
-            System.out.println(author1);
-        }
+        AuthorService.findByNameAndDelete("name");
+
+//        List<Author> whenNotFound = AuthorService.findByNameAndInsertWhenNotFound("Jefesoof Handler");
+//        for (Author author1 : whenNotFound) {
+//            System.out.println(author1);
+//        }
+
+//        List<Author> authors = AuthorService.findByNameAndUpdateToUpperCase("Kafta");
+//        for (Author author1 : authors) {
+//            System.out.println(author1.getName());
+//        }
+
+        //AuthorService.showTypeScrollWorking();
+        //AuthorService.showDriverMetaData();
+        // AuthorService.showAuthorMetaData();
+
+
+//        List<Author> authors = AuthorService.listAll();
+//        for (Author author1 : authors) {
+//            System.out.println(author1);
+//        }
+
+
+//        List<Author> authors = AuthorService.listByName("Kafta");
+//        for (Author author1 : authors) {
+//            System.out.println(author1);
+//        }
+
+
+        // AuthorService.update(authorToUpdate);
+        //List<Author> authors = AuthorService.listAll();
+        // log.info(authors);
+//        for (Author author1 : authors) {
+//            System.out.println(author1);
+//        }
 
 
         // AuthorService.save(author);
