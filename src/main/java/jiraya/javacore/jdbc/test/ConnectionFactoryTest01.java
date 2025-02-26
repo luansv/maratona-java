@@ -14,7 +14,13 @@ public class ConnectionFactoryTest01 {
         Author author = new Author.AuthorBuilder().name("Clarice Lispector").build();
         Author authorToUpdate = new Author.AuthorBuilder().id(1).name("Kafta").build();
 
-        AuthorService.findByNameAndDelete("name");
+        List<Author> kafta = AuthorService.findByNameAndPreparedStatement("G");
+        for (Author author1 : kafta) {
+            System.out.println(author1);
+        }
+
+
+        //    AuthorService.findByNameAndDelete("name");
 
 //        List<Author> whenNotFound = AuthorService.findByNameAndInsertWhenNotFound("Jefesoof Handler");
 //        for (Author author1 : whenNotFound) {

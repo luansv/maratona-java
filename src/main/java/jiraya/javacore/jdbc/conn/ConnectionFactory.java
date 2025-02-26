@@ -1,5 +1,7 @@
 package jiraya.javacore.jdbc.conn;
 
+import javax.sql.rowset.JdbcRowSet;
+import javax.sql.rowset.RowSetProvider;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,7 +23,18 @@ public class ConnectionFactory {
     public static Connection getConnection() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/book_store"; //muda dependendo do banco de dados
         String username = "root";
-        String password = "root";
+        String password = "Battle19.";
         return DriverManager.getConnection(url, username, password);
+    }
+
+    public static JdbcRowSet getJdbcRowSet() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/book_store"; //muda dependendo do banco de dados
+        String username = "root";
+        String password = "Battle19.";
+        JdbcRowSet jdbcRowSet = RowSetProvider.newFactory().createJdbcRowSet();
+        getJdbcRowSet().setUrl(url);
+        getJdbcRowSet().setUsername(username);
+        getJdbcRowSet().setPassword(password);
+        return jdbcRowSet;
     }
 }

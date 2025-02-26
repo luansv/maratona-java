@@ -188,6 +188,31 @@ public class AuthorRepository {
         return authors;
     }
 
+    public static List<Author> findByNameAndPreparedStatement(String name) {
+        List<Author> authors = new ArrayList<>();
+        String sql = "select * from author where name like '%s';"
+                .formatted("%" + name + "%");
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                Author author1 = Author.AuthorBuilder
+                        .builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .build();
+                authors.add(author1);
+            }
+
+        } catch (SQLException e) {
+            log.error("Error while trying to find author", e);
+        }
+
+        return authors;
+    }
+
+
     public static List<Author> findByNameAndInsertWhenNotFound(String name) {
         List<Author> authors = new ArrayList<>();
         String sql = "select * from author where name like '%s';"

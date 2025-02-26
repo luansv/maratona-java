@@ -34,6 +34,10 @@ public class AuthorService {
         return AuthorRepository.findByName(name);
     }
 
+    public static List<Author> findByNameAndPreparedStatement(String name){
+        return AuthorRepository.findByNameAndPreparedStatement(name);
+    }
+
     public static void showAuthorMetaData(){
         AuthorRepository.showAuthorMetaData();
     }
