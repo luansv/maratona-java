@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionFactory {
+public class ConnectionFactory02 {
     // JDBC (Java Database Connectivity)
 // Biblioteca criada para padronizar a conexão com diferentes tipos de bancos de dados.
 

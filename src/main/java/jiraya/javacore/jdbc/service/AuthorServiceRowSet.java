@@ -9,4 +9,8 @@ public class AuthorServiceRowSet {
     public static List<Author> findByNameJdbcRowSet(String name) {
         return AuthorRepositoryRowSet.findByNameJdbcRowSet(name);
     }
+
+    public static void updateJdbcRowSet(Author author) {
+        AuthorRepositoryRowSet.updateJdbcRowSet(author);
+    }
 }

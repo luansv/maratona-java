@@ -9,7 +9,13 @@ import java.util.List;
 @Log4j2
 public class ConnectionFactoryTest02 {
     public static void main(String[] args) {
-        List<Author> java = AuthorRepositoryRowSet.findByNameJdbcRowSet("Java");
-        log.info(java);
+        Author authorToUpdate = new Author.AuthorBuilder().id(1).name("Kafta").build();
+        AuthorRepositoryRowSet.updateJdbcRowSet(authorToUpdate);
+        System.out.println("----------------");
+        List<Author> authors = AuthorRepositoryRowSet.findByNameJdbcRowSet("");
+        for (Author author : authors) {
+            System.out.println(author);
+        }
+
     }
 }
