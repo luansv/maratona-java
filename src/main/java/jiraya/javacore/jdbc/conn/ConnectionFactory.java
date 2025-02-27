@@ -24,14 +24,14 @@ public class ConnectionFactory {
     public static Connection getConnection() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/book_store"; //muda dependendo do banco de dados
         String username = "root";
-        String password = "Battle19.";
+        String password = "root";
         return DriverManager.getConnection(url, username, password);
     }
 
     public static JdbcRowSet getJdbcRowSet() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/book_store"; //muda dependendo do banco de dados
         String username = "root";
-        String password = "Battle19.";
+        String password = "root";
         JdbcRowSet jdbcRowSet = RowSetProvider.newFactory().createJdbcRowSet();
         getJdbcRowSet().setUrl(url);
         getJdbcRowSet().setUsername(username);
@@ -42,7 +42,7 @@ public class ConnectionFactory {
     public static JdbcRowSet getCachedRowSet() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/book_store"; //muda dependendo do banco de dados
         String username = "root";
-        String password = "Battle19.";
+        String password = "root";
         CachedRowSet cachedRowSet = RowSetProvider.newFactory().createCachedRowSet();
         getJdbcRowSet().setUrl(url);
         getJdbcRowSet().setUsername(username);
