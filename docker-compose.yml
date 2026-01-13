@@ -8,7 +8,8 @@ services:
       ports:
         "3306:3306"
       volumes:
-        code_data:/var/lib/mysql
+         code_data:/var/lib/mysql
+
 
 volumes:
   code_data:
