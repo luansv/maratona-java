@@ -14,7 +14,7 @@ public class BookTest {
 
         System.out.println("--------Set/Get-----------");
 
-        book.setName("The remaning days");
+        book.setName("The remains of the days");
         book.setPages(235);
         book.setYear(2003);
         book.setGenre("Fantasia");
